@@ -34,7 +34,7 @@ public class CircuitBreakerCommand extends HystrixCommand<Stock> {
                 .andCommandPropertiesDefaults(
                         HystrixCommandProperties.Setter()
                                 .withCircuitBreakerEnabled(true)
-                                .withCircuitBreakerRequestVolumeThreshold(5000)
+                                .withCircuitBreakerRequestVolumeThreshold(50)
                                 .withExecutionTimeoutEnabled(true)
                                 .withExecutionTimeoutInMilliseconds(10)
                 ));
